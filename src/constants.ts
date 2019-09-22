@@ -1,0 +1,2 @@
+// COLOR
+export const GITLAB_HEADER_COLOR = "#292961";
