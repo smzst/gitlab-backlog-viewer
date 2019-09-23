@@ -7,6 +7,7 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import Launch from '@material-ui/icons/Launch';
 import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import {Tooltip} from "@material-ui/core";
+import Label from "./Label";
 
 interface IProps {
     title: string;
@@ -39,7 +40,7 @@ const Ticket: React.FC<IProps> = props => {
                 <ListItem component="div" button onClick={setSelectedTicketIndex} selected={selected}>
                     <ListItemText
                         primary={title}
-                        secondary={`weight: ${weight} / labels: ${labels.join(", ")}`}/>
+                        secondary={labels.map(l => <Label value={l} backgroundColor="#FFF" fontColor="#FFF"/>)}/>
                     <ListItemSecondaryAction>
                         <Tooltip title="View on GitLab">
                             <IconButton edge="end" href={url} target="_blank">
