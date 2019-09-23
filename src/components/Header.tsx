@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
         root: {
             backgroundColor: GITLAB_HEADER_COLOR,
             flexGrow: 1,
+            top: 0,
         },
     }),
 );
@@ -17,7 +18,7 @@ const Header: React.FC = () => {
     const classes = useStyles();
 
     return (
-        <AppBar position="static" className={classes.root}>
+        <AppBar position="fixed" className={classes.root}>
             <Toolbar variant="dense"/>
         </AppBar>
     )
